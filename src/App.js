@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import SiteLayout from "./components/SiteLayout";
+import CertificatesPage from "./pages/CertificatesPage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <Routes>
+        <Route path="/" element={<SiteLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="certificates" element={<CertificatesPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate replace to="/" />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
