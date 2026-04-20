@@ -8,7 +8,7 @@ const profile = {
   about:
     "Computer Science student skilled in full-stack and AI development. This portfolio is structured to present my profile, project work, and certificates in a clean academic format.",
   profileImage: "/assets/profile/Ashish Kumar.jpg",
-  resumePath: "/assets/resume/Ashish_Resume2.pdf",
+  resumePath: "/assets/resume/ASHISH_RESUME2.pdf",
   skills: ["React", "Node.js", "MongoDB","SQL", "Django", "PostgreSQL", "Machine Learning","Python", "Java", "C++", "Git", "Docker","GCP"],
   education: [
     {
